@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mebelux | Finance</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/slider-2.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/jqtransform.css">
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/vegur_400.font.js"></script>
+<script src="js/Vegur_bold_700.font.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/tms-0.4.x.js"></script>
+<script src="js/jquery.jqtransform.js"></script>
+<script src="js/FF-cash.js"></script>
+<script>
+$(document)
+    .ready(function () {
+    $('.form-1')
+        .jqTransform();
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 1000,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div class="main">
+  <!--==============================header=================================-->
+  <header>
+    <div>
+      <h1><a href="index.html"><img src="images/logo.jpg" alt=""></a></h1>
+      <div class="social-icons"> <span>Follow Us:</span> <a href="#" class="icon-3"></a> <a href="#" class="icon-2"></a> <a href="#" class="icon-1"></a> </div>
+      <div id="slide">
+        <div class="slider">
+          <ul class="items">
+            <li><img src="images/slider-1-small.jpg" alt=""></li>
+            <li><img src="images/slider-2-small.jpg" alt=""></li>
+            <li><img src="images/slider-3-small.jpg" alt=""></li>
+          </ul>
+        </div>
+        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="buying.html">Buying</a></li>
+          <li><a href="selling.html">Selling</a></li>
+          <li><a href="renting.html">Renting</a></li>
+          <li class="current"><a href="finance.html">Finance</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="container_12">
+      <div class="grid_8">
+        <h2 class="top-1 p3">About financing</h2>
+        <div class="wrap"> <img src="images/page5-img1.jpg" alt="" class="img-border img-indent">
+          <div class="extra-wrap">
+            <p class="color-1 p6">You have the opportunity to finance our company and become our patron, or finance your startup.</p>
+            <p>Unless your business has the balance sheet of Apple, eventually you will probably need access to capital through financing. In fact, even many large-cap companies routinely ask for capital infusions to meet short-term obligations. For small businesses, finding the right funding model is vitally important.</p>
+          </div>
+        </div>
+        <p class="p5">Debt financing for your business is something you likely understand better than you think. Do you have a mortgage or automobile loan? Both of these are forms of debt financing. For your business, it works the same way. Debt financing comes from a bank or other lending institution. Although it is possible for private investors to offer it to you, this is not the norm.</p>
+        <a href="#" class="button">Read more</a>
+        <h2 class="top-2 p3">Financing center</h2>
+        <div class="wrap"> <img src="images/page5-img2.jpg" alt="" class="img-border img-indent">
+          <div class="extra-wrap">
+            <p class="color-1 p6">There are several types of financing in our company, if you want to know more about this, write a letter with the code word FINANCING START.</p>
+            <p> Here is how it works. When you decide that you need a loan, you head to the bank and complete an application. If your business is in the earliest stages of development, the bank will check your personal credit.</p>
+          </div>
+        </div>
+        <p class="p5">For businesses that have a more complicated corporate structure, or have been in existence for an extended period time, banks will check other sources. One of the most important is the Dun & Bradstreet (D&B) file. D&B is the best-known company for compiling a credit history on businesses. Along with your business credit history, the bank will want to examine your books and likely complete other due diligence.</p>
+        <a href="#" class="button">Read more</a> </div>
+      <div class="grid_4">
+        <div class="left-1">
+          <h2 class="top-1 p3">Find your dream</h2>
+          <form id="form-1" class="form-1 bot-2" action="#">
+            <div class="select-1">
+              <label>Furniture type</label>
+              <select name="select" >
+                <option>Furniture for sale</option>
+              </select>
+            </div>
+            <div>
+              <label>Location</label>
+              <input type="text" value="Address, City" onBlur="if(this.value=='') this.value='Address, City'" onFocus="if(this.value =='Address, City' ) this.value=''">
+            </div>
+            <a class="button">Search</a>
+            <div class="clear"></div>
+          </form>
+          <h2 class="p3">Did you know?</h2>
+          <p class="color-1 p6"><strong>You can start financing projects right now.</strong></p>
+          <p>Before applying, make sure all business records are complete and organized. If the bank approves your loan request, it will set up payment terms, including interest. If the process sounds a lot like the process you have gone through numerous times to receive a bank loan, you are right.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+<!--==============================footer=================================-->
+<footer>
+  <p>© 2020 Mebelux</p>
+</footer>
+<script>Cufon.now();</script>
+</body>
+</html>

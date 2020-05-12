@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mebelux | Buying</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/slider-2.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/jqtransform.css">
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/vegur_400.font.js"></script>
+<script src="js/Vegur_bold_700.font.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/tms-0.4.x.js"></script>
+<script src="js/jquery.jqtransform.js"></script>
+<script src="js/FF-cash.js"></script>
+<script>
+$(document)
+    .ready(function () {
+    $('.form-1')
+        .jqTransform();
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 1000,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<div class="main">
+  <!--==============================header=================================-->
+  <header>
+    <div>
+      <h1><a href="index.html"><img src="images/logo.jpg" alt=""></a></h1>
+      <div class="social-icons"> <span>Follow Us:</span> <a href="#" class="icon-3"></a> <a href="#" class="icon-2"></a> <a href="#" class="icon-1"></a> </div>
+      <div id="slide">
+        <div class="slider">
+          <ul class="items">
+            <li><img src="images/slider-1-small.jpg" alt=""></li>
+            <li><img src="images/slider-2-small.jpg" alt=""></li>
+            <li><img src="images/slider-3-small.jpg" alt=""></li>
+          </ul>
+        </div>
+        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Main</a></li>
+          <li class="current"><a href="buying.html">Buying</a></li>
+          <li><a href="selling.html">Selling</a></li>
+          <li><a href="renting.html">Renting</a></li>
+          <li><a href="finance.html">Finance</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="container_12">
+      <div class="grid_8">
+        <h2 class="top-1 p3">About buying</h2>
+        <p>High-end design, without the high-end price tag? That's kind of our thing. We work directly with independent designers and makers to create pieces you'll love, that are MADE to last – and won't break the bank.</p>
+        <div class="lists-2">
+          <ul class="list-1">
+            <li><a href="#">What materials are used</a></li>
+            <li><a href="#">How to know the size</a></li>
+            <li><a href="#">Рow to choose the right material</a></li>
+            <li><a href="#">What colors are presented</a></li>
+            <li><a href="#">How to choose color</a></li>
+          </ul>
+          <ul class="list-1">
+            <li><a href="#">Our subsidiaries</a></li>
+            <li><a href="#">Our startup's</a></li>
+            <li><a href="#">Assistance with design creation</a></li>
+            <li><a href="#">How to add credit card</a></li>
+            <li><a href="#">How to calculate price</a></li>
+          </ul>
+          <ul class="list-1 last">
+            <li><a href="#">Help with buying</a></li>
+            <li><a href="#">3-Steps how to choose furniture</a></li>
+            <li><a href="#">Awesome way to plan your room</a></li>
+            <li><a href="#">Help with transporting</a></li>
+            <li><a href="#">Delivery companies</a></li>
+          </ul>
+        </div>
+        <a href="#" class="button">Read more</a>
+        <h2 class="top-2 p3">Buying guide</h2>
+        <p class="p5">When you shop on Mebelux, you’re not just supporting a new designer, you’re getting a chance to own an original piece of design for less than it’s listing price on MADE.COM. Simply put a deposit on it and if enough others do the same, we’ll make it and send it to you once you’ve paid in full.</p>
+        <div class="wrap block-2"> <a href="#"><img src="images/page2-img1.jpg" alt="" class="img-border"></a> <a href="#"><img src="images/page2-img2.jpg" alt="" class="img-border"></a> <a href="#"><img src="images/page2-img3.jpg" alt="" class="img-border"></a> <a href="#" class="last"><img src="images/page2-img4.jpg" alt="" class="img-border"></a> </div>
+      </div>
+      <div class="grid_4">
+        <div class="left-1">
+          <h2 class="top-1 p3">Find your dream</h2>
+          <form id="form-1" class="form-1 bot-2" action="#">
+            <div class="select-1">
+              <label>Furniture type</label>
+              <select name="select" >
+                <option>Furniture for sale</option>
+              </select>
+            </div>
+            <div>
+              <label>Location</label>
+              <input type="text" value="Address, City" onBlur="if(this.value=='') this.value='Address, City'" onFocus="if(this.value =='Address, City' ) this.value=''">
+            </div>
+            <a class="button">Search</a>
+            <div class="clear"></div>
+          </form>
+          <h2 class="p3">Best offers</h2>
+          <p class="color-1">How to design and order furniture. </p>
+          <p>To design furniture you need to contact our staff and design a model, after whitch it will be considered by the team of creators and put into production. </p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+<!--==============================footer=================================-->
+<footer>
+  <p>© 2020 Mebelux</p>
+</footer>
+<script>Cufon.now();</script>
+</body>
+</html>

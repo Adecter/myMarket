@@ -133,7 +133,6 @@ I use [deploy](https://github.com/visionmedia/deploy), a 400 lines bash script w
 
 ### Code Guidelines
 
-* Node Style Guide - http://nodeguide.com/style.html
 * Use Jshint
 * Single entry point for dependencies (easy to mock when testing)
 

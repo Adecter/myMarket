@@ -1,13 +1,25 @@
 {
-  "contact1":
-  {
-    "id" : "1",
-    "name" : "josh"
-  },
-  
-  "contact2":
-  { 
-    "id" : "2",
-    "name":"jordan"
-  }
+  "products":[
+   {
+    "id": "1",
+    "productName": "Bed king",
+    "quantity": "3",
+    "place": "Riga",
+    "type": "Beds"
+    },
+    {
+    "id": "2",
+    "productName": "Bed black",
+    "quantity": "5",
+    "place": "Riga",
+    "type": "Beds"
+    },
+    {
+    "id": "3",
+    "productName": "Bed red",
+    "quantity": "4",
+    "place": "Riga",
+    "type": "Beds"
+    }
+  ]
 }

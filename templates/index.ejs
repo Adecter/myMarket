@@ -1,131 +1,140 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title><%= title %></title>
-  <meta content="Mebelux" name="description">
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport">
-
-  <link href="public/images/favicon.ico" rel="shortcut icon">
-  <link href="public/css/app.css" rel="stylesheet">
-  <link href="public/css/awesome_menu_font.css" rel= "stylesheet asfsdf">
-  <link type="text/css" href="public/css/menu.css" rel="stylesheet">
-  <link type="text/css" href="public/css/menu_gallery.css" rel="stylesheet">
-
-  <!--<script src="public/js/gallery.js"></script>-->
-  
+<title>Mebelux</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="public/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="public/css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="public/css/grid_12.css">
+<link rel="stylesheet" type="text/css" media="screen" href="public/css/slider.css">
+<link rel="stylesheet" type="text/css" media="screen" href="public/css/jqtransform.css">
+<link href="public/images/favicon.ico" rel="shortcut icon">
+<script src="public/js/jquery-1.7.min.js"></script>
+<script src="public/js/jquery.easing.1.3.js"></script>
+<script src="public/js/cufon-yui.js"></script>
+<script src="public/js/vegur_400.font.js"></script>
+<script src="public/js/Vegur_bold_700.font.js"></script>
+<script src="public/js/cufon-replace.js"></script>
+<script src="public/js/tms-0.4.x.js"></script>
+<script src="public/js/jquery.jqtransform.js"></script>
+<script src="public/js/FF-cash.js"></script>
+<script>
+$(document)
+    .ready(function () {
+    $('.form-1')
+        .jqTransform();
+    $('.slider')
+        ._TMS({
+        show: 0,
+        pauseOnHover: true,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 1000,
+        preset: 'fade',
+        pagination: true,
+        pagNums: false,
+        slideshow: 7000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
 </head>
-
 <body>
-  <div class="header">
-    <h1 class="header__title">Mebelux</h1>
-  </div>
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Living Room
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#living_room/sofas">Sofas</a>
-        <a href="#living_room/loveseats">Loveseats</a>
-        <a href="#living_room/sectionals">Sectionals</a>
-        <a href="#living_room/chairs+chaises">Chairs & Chaises</a>
-        <a href="#living_room/safabeds+futons">Sofabeds & Futons</a>
-        <a href="#living_room/recliners">Recliners</a>
-        <a href="#living_room/ottomans+benches">Ottomans & Benches</a>
-        <a href="#living_room/cabinets+shelving">Cabinets & Shelving</a>
-        <a href="#living_room/entertainment_centres">Entertainment Centres</a>
-        <a href="#living_room/tv_stands">TV Stands & Mounts</a>
-        <a href="#living_room/coffee_tables">Coffee Tables</a>
-        <a href="#living_room/end+accent_tables">End & Accent Tables</a>
-        <a href="#living_room/sofa+console_tables">Sofa & Console Tables</a>
-        <a href="#living_room/fireplaces+screens">Fireplaces & Screens</a>
-        <a href="#living_room/table_packages">Table Packages</a>
-        <a href="#living_room/packages">Living Room Packages</a>
+<div class="main">
+  <!--==============================header=================================-->
+  <header>
+    <div>
+      <h1><a href="public/index.html"><img src="public/images/logo.jpg" alt=""></a></h1>
+      <div class="social-icons"> <span>Follow Us:</span> <a href="#" class="icon-3"></a> <a href="#" class="icon-2"></a> <a href="#" class="icon-1"></a> </div>
+      <div id="slide">
+        <div class="slider">
+          <ul class="items">
+            <li><img src="public/images/slider-1.jpg" alt=""></li>
+            <li><img src="public/images/slider-2.jpg" alt=""></li>
+            <li><img src="public/images/slider-3.jpg" alt=""></li>
+          </ul>
+        </div>
+        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
+      <nav>
+        <ul class="menu">
+          <li class="current"><a href="public/index.html">Main</a></li>
+          <li><a href="public/buying.html">Buying</a></li>
+          <li><a href="public/selling.html">Selling</a></li>
+          <li><a href="public/renting.html">Renting</a></li>
+          <li><a href="public/finance.html">Finance</a></li>
+          <li><a href="public/contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="container_12">
+      <div class="grid_8">
+        <h2 class="top-1 p3">Mebelux!</h2>
+        <p class="p2">This site was created to help people, find best orders and ways, to buy new furniture.</p>
+        <p class="line-1">Spend precious weekends to visit 4-5 stores with your family, wait for the staff to attend to you, compare prices, features and discounts, haggle over the ‘final’ price, and finally wonder about the quality of wood and workmanship. Surely there has to be a better way to furnish your dream home? Online furniture shopping is an oasis of calm in this chaotic situation. When you can purchase phones, mutual funds, vacations, and laptops online, why hesitate to buy furniture online? The quality is at par with – or even better than – their offline counterparts. Furniture online is also covered under excellent warranty terms.</p>
+        <h2 class="p4">Buyers. Sellers. Proprietors. Agents.</h2>
+        <div class="wrap block-1">
+          <div> <img src="public/images/page1-img1.jpg" alt="" class="img-border">
+            <h3>Selling</h3>
+            <p>You also can sell yours furniture and make some money.</p>
+            <a href="#" class="button">More</a> </div>
+          <div> <img src="public/images/page1-img2.jpg" alt="" class="img-border">
+            <h3>Investing</h3>
+            <p>You can invest furniture to receive monthly income.</p>
+            <a href="#" class="button">More</a> </div>
+          <div class="last"> <img src="public/images/page1-img3.jpg" alt="" class="img-border">
+            <h3>Renting</h3>
+            <p>You can rent furniture if you have financial difficulties.</p>
+            <a href="#" class="button">More</a> </div>
+        </div>
       </div>
-    </div> 
-    <a href="#kids+baby">Kids & Baby</a>
-    <a href="#garage">Garage</a> 
-    <div class="dropdown">
-      <button class="dropbtn">Dining Room
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#dining_room/chairs">Dining Chairs</a>
-        <a href="#dining_room/tables">Dining Tables</a>
-        <a href="#dining_room/counter+bar_stools">Counter & Bar Stools</a>
-        <a href="#dining_room/packages">Dining Packages</a>
-        <a href="#dining_room/buffets+sideboards">Buffets & Sideboards</a>
-        <a href="#dining_room/dining_room/benches">Dining Benches</a>
-        <a href="#dining_room/bars+carts+islands">Bars, Carts & Islands</a>
-        <a href="#dining_room/china_cabinets+ccurios">China Cabinets & Curios</a>
+      <div class="grid_4">
+        <div class="left-1">
+          <h2 class="top-1 p3">Find your dream</h2>
+          <form id="form-1" class="form-1 bot-1" action="#">
+            <div class="select-1">
+              <label>Furniture type</label>
+              <select name="select" >
+                <option>Furniture for sale</option>
+              </select>
+            </div>
+            <div>
+              <label>Location</label>
+              <input type="text" value="Address, City" onBlur="if(this.value=='') this.value='Address, City'" onFocus="if(this.value =='Address, City' ) this.value=''">
+            </div>
+            <a class="button">Search</a>
+            <div class="clear"></div>
+          </form>
+          <h2 class="p3">Find our office</h2>
+          <img src="public/images/page1-img4.png" alt="">
+          <div class="lists">
+            <ul class="list-1">
+              <li><a href="#">Estonia</a></li>
+              <li><a href="#">Latvia</a></li>
+              <li><a href="#">Lithuania</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div> 
-    <a href="#home_office">Home Office</a>
-    <a href="#hallway">Hallway</a>
-    <div class="dropdown">
-      <button class="dropbtn">Bedroom
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#bedroom/king_beds">King Beds</a>
-        <a href="#bedroom/queen_beds">Queen Beds</a>
-        <a href="#bedroom/full_beds">Full Beds</a>
-        <a href="#bedroom/storage_beds">Storage Beds</a>
-        <a href="#bedroom/daybeds+futons">Daybeds & Futons</a>
-        <a href="#bedroom/headboards+frames">Headboards & Frames</a>
-        <a href="#bedroom/dressers+chests">Dressers & Chests</a>
-        <a href="#bedroom/nights_tables">Nights Tables</a>
-        <a href="#bedroom/mirrors">Bedroom Mirrors</a>
-        <a href="#bedroom/armoires+vaities">Armoires & Vanities</a>
-        <a href="#bedroom/end_of_bed">End Of Bed</a>
-        <a href="#bedroom/packages">Bedrooom packages</a>
-      </div>
-    </div> 
-    <a href="#storage">Storage</a>
-    <a href="#bathroom">Bathroom</a>
-  </div>
-
-<div class="row"> 
-  <div class="column">
-    <img src="public/images/gallery/Furniture_1.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_2.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_3.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_4.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_5.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_6.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_7.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_26.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="public/images/gallery/Furniture_8.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_9.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_10.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_11.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_12.png" style="width:100%">
-    <img src="public/images/gallery/Furniture_13.jpg" style="width:100%">
-  </div>  
-  <div class="column">
-    <img src="public/images/gallery/Furniture_14.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_15.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_16.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_17.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_18.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_19.jpg" style="width:100%">
-  </div>  
-  <div class="column">
-    <img src="public/images/gallery/Furniture_20.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_21.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_22.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_23.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_24.jpg" style="width:100%">
-    <img src="public/images/gallery/Furniture_25.jpg" style="width:100%">
-  </div>  
-  
-
-
-  <script src="public/js/bundle.js"></script>
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+<!--==============================footer=================================-->
+<footer>
+  <p>© 2020 Mebelux</p>
+</footer>
+<script>Cufon.now();</script>
+<script src="public/js/bundle.js"></script>
 </body>
 </html>
