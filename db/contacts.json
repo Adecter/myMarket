@@ -1,25 +1,7 @@
 {
-  "products":[
-   {
-    "id": "1",
-    "productName": "Bed king",
-    "quantity": "3",
-    "place": "Riga",
-    "type": "Beds"
-    },
-    {
-    "id": "2",
-    "productName": "Bed black",
-    "quantity": "5",
-    "place": "Riga",
-    "type": "Beds"
-    },
-    {
-    "id": "3",
-    "productName": "Bed red",
-    "quantity": "4",
-    "place": "Riga",
-    "type": "Beds"
-    }
+  "beds":[
+        {"id": 10, "place": "Riga", "name": "Kings bed"},
+        {"id": 11, "place": "Ogre", "name": "Queen bed"},
+        {"id": 12, "place": "Riga", "name": "Kids bed"}
   ]
 }

@@ -47,7 +47,19 @@ $(document)
         .click(function(){
         var selectedType = $('.type').children("option:selected").val();
         var selectedPlace = $('#location').val();
-        alert(selectedPlace+" "+selectedType);  
+        var defiant = await fetchScript('/res/js/modules/defiant.js');
+        var data = await fetchJSON('/res/json/contacts.json');
+        var search = defiant.search(data, ''.concat('//'+selectedType+'[place="'+selectedPlace+'"]/name'));
+        alert(search);
+        
+        
+        'use strict';
+        
+        const fs = require('fs');
+
+      let rawdata = fs.readFileSync('contacts.json');
+      let student = JSON.parse(rawdata);
+      console.log(student);
 
     })
 });
@@ -117,10 +129,10 @@ $(document)
             <div class="select-1">
               <label>Furniture type</label>
               <select class="type" >
-                <option value="bed">Beds</option>
+                <option value="beds">Beds</option>
                 <option value="chairs">Chairs</option>
-                <option value="table">Tables</option>
-                <option value="sofa">Sofas</option>
+                <option value="tables">Tables</option>
+                <option value="sofas">Sofas</option>
               </select>
             </div>
             <div class = "location">
