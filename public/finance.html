@@ -17,6 +17,7 @@
 <script src="js/tms-0.4.x.js"></script>
 <script src="js/jquery.jqtransform.js"></script>
 <script src="js/FF-cash.js"></script>
+
 <script>
 $(document)
     .ready(function () {
@@ -39,8 +40,21 @@ $(document)
         waitBannerAnimation: false,
         progressBar: false
     })
+    $('.read')
+    .click(function(){
+        var text = $('#financetext').text();
+        if(localStorage.clickcountfinance) {
+            localStorage.clickcountfinance = Number(localStorage.clickcountfinance)+1;
+        }else{
+            localStorage.clickcountfinance = 1;
+        }
+        localStorage.setItem("financetext","Finance (" + localStorage.clickcountfinance + ")");
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      
+    })
 });
-</script>
+</script></script>
+
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
@@ -65,14 +79,40 @@ $(document)
       <nav>
         <ul class="menu">
           <li><a href="index.html">Main</a></li>
-          <li><a href="buying.html">Buying</a></li>
-          <li><a href="selling.html">Selling</a></li>
-          <li><a href="renting.html">Renting</a></li>
-          <li class="current"><a href="finance.html">Finance</a></li>
+          <li><a href="buying.html"><div id = "buying"></a></li>
+          <li><a href="selling.html"><div id = "selling"></div></a></li>
+          <li><a href="renting.html"><div id = "renting"></div></a></li>
+          <li class="current"><a href="finance.html"><div id="finance"></div></a></li>
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
     </div>
+    <script>
+      if(localStorage.getItem("financetext") == null){
+        localStorage.setItem("financetext","Finance");
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }else{
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }
+      if(localStorage.getItem("rentingtext") == null){
+        localStorage.setItem("rentingtext","Renting");
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }else{
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }
+      if(localStorage.getItem("sellingtext") == null){
+        localStorage.setItem("sellingtext","Selling");
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }else{
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }
+      if(localStorage.getItem("buyingtext") == null){
+        localStorage.setItem("buyingtext","buying");
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }else{
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }
+    </script>
   </header>
   <!--==============================content================================-->
   <section id="content">
@@ -86,7 +126,9 @@ $(document)
           </div>
         </div>
         <p class="p5">Debt financing for your business is something you likely understand better than you think. Do you have a mortgage or automobile loan? Both of these are forms of debt financing. For your business, it works the same way. Debt financing comes from a bank or other lending institution. Although it is possible for private investors to offer it to you, this is not the norm.</p>
+        <div class="read">
         <a href="#" class="button">Read more</a>
+        </div>
         <h2 class="top-2 p3">Financing center</h2>
         <div class="wrap"> <img src="images/page5-img2.jpg" alt="" class="img-border img-indent">
           <div class="extra-wrap">
@@ -95,7 +137,8 @@ $(document)
           </div>
         </div>
         <p class="p5">For businesses that have a more complicated corporate structure, or have been in existence for an extended period time, banks will check other sources. One of the most important is the Dun & Bradstreet (D&B) file. D&B is the best-known company for compiling a credit history on businesses. Along with your business credit history, the bank will want to examine your books and likely complete other due diligence.</p>
-        <a href="#" class="button">Read more</a> </div>
+        <div class="read">
+        <a href="#" class="button">Read more</a> </div></div>
       <div class="grid_4">
         <div class="left-1">
           <h2 class="top-1 p3">Find your dream</h2>

@@ -39,6 +39,18 @@ $(document)
         waitBannerAnimation: false,
         progressBar: false
     })
+    $('.read')
+    .click(function(){
+        var text = $('#rentingtext').text();
+        if(localStorage.clickcountrenting) {
+            localStorage.clickcountrenting = Number(localStorage.clickcountrenting)+1;
+        }else{
+            localStorage.clickcountrenting = 1;
+        }
+        localStorage.setItem("rentingtext","Renting (" + localStorage.clickcountrenting + ")");
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      
+    })
 });
 </script>
 <!--[if lt IE 9]>
@@ -65,14 +77,40 @@ $(document)
       <nav>
         <ul class="menu">
           <li><a href="index.html">Main</a></li>
-          <li><a href="buying.html">Buying</a></li>
-          <li><a href="selling.html">Selling</a></li>
-          <li class="current"><a href="renting.html">Renting</a></li>
-          <li><a href="finance.html">Finance</a></li>
+          <li><a href="buying.html"><div id = "buying"></a></li>
+          <li><a href="selling.html"><div id = "selling"></a></li>
+          <li class="current"><a href="renting.html"><div id = "renting"></div></a></li>
+          <li><a href="finance.html"><div id = "finance"></div></a></li>
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
     </div>
+    <script>
+      if(localStorage.getItem("financetext") == null){
+        localStorage.setItem("financetext","Finance");
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }else{
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }
+      if(localStorage.getItem("rentingtext") == null){
+        localStorage.setItem("rentingtext","Renting");
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }else{
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }
+      if(localStorage.getItem("sellingtext") == null){
+        localStorage.setItem("sellingtext","Selling");
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }else{
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }
+      if(localStorage.getItem("buyingtext") == null){
+        localStorage.setItem("buyingtext","buying");
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }else{
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }
+    </script>
   </header>
   <!--==============================content================================-->
   <section id="content">
@@ -87,11 +125,11 @@ $(document)
           <div class="extra-wrap">
             <p class="color-1 p2">With the help of our company, you can easily rent the best and fabulous furniture in the shortest possible time.</p>
             <p>To be able to rent any furniture of your choice right now, you need to leave a request and send it using our website in the contacts section. If you currently have financial difficulties, you can easily participate in the competition for free rental for 6 months, for this you need to send an application with the code word RENT FOR FREE.</p>
-            <a href="#" class="button top-4">Read more</a> </div>
+            <div class="read"><a href="#" class="button top-4">Read more</a> </div> </div>
         </div>
         <h2 class="top-5 p3">Rent management</h2>
         <p>Our company provides the opportunity to change and agree on the terms of the lease, before signing the contract, for this, visit the nearest client center.</p>
-        <a href="#" class="button">Read more</a> </div>
+        <div class="read"><a href="#" class="button">Read more</a> </div> </div>
       <div class="grid_4">
         <div class="left-1">
           <h2 class="top-1 p3">Find your dream</h2>

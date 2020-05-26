@@ -17,6 +17,7 @@
 <script src="js/tms-0.4.x.js"></script>
 <script src="js/jquery.jqtransform.js"></script>
 <script src="js/FF-cash.js"></script>
+<script src="js/defiant.js"></script>
 <script>
 $(document)
     .ready(function () {
@@ -44,26 +45,19 @@ $(document)
         alert("Mail sended.");
     })
     $('.butselect')
-        .click(function(){
+        .click(async function(){
+          'use strict';
         var selectedType = $('.type').children("option:selected").val();
         var selectedPlace = $('#location').val();
-        var defiant = await fetchScript('/res/js/modules/defiant.js');
-        var data = await fetchJSON('/res/json/contacts.json');
-        var search = defiant.search(data, ''.concat('//'+selectedType+'[place="'+selectedPlace+'"]/name'));
-        alert(search);
-        
-        
-        'use strict';
-        
-        const fs = require('fs');
-
-      let rawdata = fs.readFileSync('contacts.json');
-      let student = JSON.parse(rawdata);
-      console.log(student);
+        var defiant = await fetchScript('js/defiant.js');
+        var data = await fetchJSON('../db/contacts.json');
+        var search = defiant.search(data, '//bed[place="Riga"]/name');
+        alert(search); 
 
     })
 });
 </script>
+
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
@@ -88,14 +82,40 @@ $(document)
       <nav>
         <ul class="menu">
           <li><a href="index.html">Main</a></li>
-          <li><a href="buying.html">Buying</a></li>
-          <li><a href="selling.html">Selling</a></li>
-          <li><a href="renting.html">Renting</a></li>
-          <li><a href="finance.html">Finance</a></li>
+          <li><a href="buying.html"><div id = "buying"></div></a></li>
+          <li><a href="selling.html"><div id = "selling"></div></a></li>
+          <li><a href="renting.html"><div id = "renting"></div></a></li>
+          <li><a href="finance.html"><div id = "finance"></div></a></li>
           <li class="current"><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
     </div>
+    <script>
+      if(localStorage.getItem("financetext") == null){
+        localStorage.setItem("financetext","Finance");
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }else{
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }
+      if(localStorage.getItem("rentingtext") == null){
+        localStorage.setItem("rentingtext","Renting");
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }else{
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }
+      if(localStorage.getItem("sellingtext") == null){
+        localStorage.setItem("sellingtext","Selling");
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }else{
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }
+      if(localStorage.getItem("buyingtext") == null){
+        localStorage.setItem("buyingtext","buying");
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }else{
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }
+    </script>
   </header>
   <!--==============================content================================-->
   <section id="content">
@@ -129,10 +149,10 @@ $(document)
             <div class="select-1">
               <label>Furniture type</label>
               <select class="type" >
-                <option value="beds">Beds</option>
+                <option value="bed">Beds</option>
                 <option value="chairs">Chairs</option>
-                <option value="tables">Tables</option>
-                <option value="sofas">Sofas</option>
+                <option value="table">Tables</option>
+                <option value="sofa">Sofas</option>
               </select>
             </div>
             <div class = "location">

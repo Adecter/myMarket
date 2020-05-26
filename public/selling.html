@@ -39,6 +39,18 @@ $(document)
         waitBannerAnimation: false,
         progressBar: false
     })
+    $('.read')
+    .click(function(){
+        var text = $('#sellingtext').text();
+        if(localStorage.clickcountselling) {
+            localStorage.clickcountselling = Number(localStorage.clickcountselling)+1;
+        }else{
+            localStorage.clickcountselling = 1;
+        }
+        localStorage.setItem("sellingtext","Selling (" + localStorage.clickcountselling + ")");
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      
+    })
 });
 </script>
 <!--[if lt IE 9]>
@@ -65,14 +77,40 @@ $(document)
       <nav>
         <ul class="menu">
           <li><a href="index.html">Main</a></li>
-          <li><a href="buying.html">Buying</a></li>
-          <li class="current"><a href="selling.html">Selling</a></li>
-          <li><a href="renting.html">Renting</a></li>
-          <li><a href="finance.html">Finance</a></li>
+          <li><a href="buying.html"><div id = "buying"></div></a></li>
+          <li class="current"><a href="selling.html"><div id = "selling"></div></a></li>
+          <li><a href="renting.html">R<div id = "renting"></div></a></li>
+          <li><a href="finance.html"><div id = "finance"></div></a></li>
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
     </div>
+    <script>
+      if(localStorage.getItem("financetext") == null){
+        localStorage.setItem("financetext","Finance");
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }else{
+        document.getElementById("finance").innerHTML = localStorage.getItem("financetext");
+      }
+      if(localStorage.getItem("rentingtext") == null){
+        localStorage.setItem("rentingtext","Renting");
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }else{
+        document.getElementById("renting").innerHTML = localStorage.getItem("rentingtext");
+      }
+      if(localStorage.getItem("sellingtext") == null){
+        localStorage.setItem("sellingtext","Selling");
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }else{
+        document.getElementById("selling").innerHTML = localStorage.getItem("sellingtext");
+      }
+      if(localStorage.getItem("buyingtext") == null){
+        localStorage.setItem("buyingtext","buying");
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }else{
+        document.getElementById("buying").innerHTML = localStorage.getItem("buyingtext");
+      }
+    </script>
   </header>
   <!--==============================content================================-->
   <section id="content">
@@ -86,7 +124,7 @@ $(document)
           </div>
         </div>
         <p class="p5">You can also open a dispute and we will attach additional information. Within 5 working days we will consider your dispute and an independent commission will be invited. If after an independent commission you are not satisfied with the price of your furniture, you have the opportunity to visit one of our branches to discuss the final price.</p>
-        <a href="#" class="button">Read more</a>
+        <div class="read"> <a href="#" class="button">Read more</a> </div>  
         <h2 class="top-2 p3">Mortgage center</h2>
         <p class="color-1 p2">Also, you have the opportunity, with the help of our company, to partially repay a mortgage loan.</p>
         <div class="wrap"> <img src="images/page3-img2.jpg" alt="" class="img-border img-indent">
