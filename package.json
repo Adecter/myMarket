@@ -25,7 +25,7 @@
     "defiant.js": "^2.2.6",
     "ejs": "~0.8.4",
     "error-page": "0.0.6",
-    "forever": "~0.10.11",
+    "forever": "~4.0.3",
     "nodemailer": "^6.4.6",
     "pg": "^8.2.0",
     "routes": "~0.2.0",
